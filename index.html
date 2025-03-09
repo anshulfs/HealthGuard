@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthGuard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+      <div class="container">
+        <div class="logo-container">
+          <h1 class="logo-text">HealthGuard</h1>
+        </div>
+        <ul class="nav-links">
+          <!-- Home Dropdown -->
+          <li class="dropdown">
+            <a href="home.html">Home</a>
+            <ul class="dropdown-menu">
+              <li><a href="#problem">Problem</a></li>
+              <li><a href="#solution">Our Solution</a></li>
+              <li><a href="#apps">Apps</a></li>
+            </ul>
+          </li>
+
+          <!-- HealthGuard Dropdown -->
+          <li class="dropdown">
+            <a href="index.html">iSight</a>
+            <ul class="dropdown-menu">
+              <li><a href="#upload">Upload Data</a></li>
+              <li><a href="#health-report">Health Report</a></li>
+              <li><a href="#insights">Insights</a></li>
+            </ul>
+          </li>
+
+          <!-- iTherapist Dropdown -->
+          <li class="dropdown">
+            <a href="therapy.html">iTherapist</a>
+            <ul class="dropdown-menu">
+              <li><a href="#person">Personalization</a></li>
+              <li><a href="#questions">Questions</a></li>
+              <li><a href="#analysis">Analysis</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+
+  <section id="hero">
+    <div class="container">
+      <h2>Transform Your Health Data into Actionable Insights</h2>
+      <p>Upload your Apple Health data and get personalized recommendations to optimize your well-being.</p>
+      <a href="#upload" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <section id="upload">
+    <div class="container">
+      <h2>Upload Your Health Data</h2>
+      <p>Export your Apple Health data as an XML file and upload it below.</p>
+      <input type="file" id="health-data" accept=".xml">
+      <p id="upload-status">No file uploaded yet.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="health-report">
+    <div class="container">
+      <h2>Your Health Report</h2>
+      <div class="charts-container">
+        <div class="chart" id="steps-container">
+          <h3>Step Count</h3>
+          <p id="steps-placeholder">Upload a file to view the step count graph.</p>
+          <canvas id="steps-chart"></canvas>
+        </div>
+        <div class="chart" id="heart-rate-container">
+          <h3>Heart Rate</h3>
+          <p id="heart-rate-placeholder">Upload a file to view the heart rate graph.</p>
+          <canvas id="heart-rate-chart"></canvas>
+        </div>
+        <div class="chart" id="sleep-hours-container">
+          <h3>Sleep Hours</h3>
+          <p id="sleep-hours-placeholder">Upload a file to view the sleep hours graph.</p>
+          <canvas id="sleep-hours-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+  
+  <section id="insights">
+    <div class="container">
+      <h2>Your Health Insights</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Risk Assessment</h3>
+          <p id="risk-text">Upload your data to see your risk assessment.</p>
+        </div>
+        <div class="card">
+          <h3>Recommendations</h3>
+          <p id="recommendation-text">Upload your data to get personalized recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2023 HealthGuard. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
