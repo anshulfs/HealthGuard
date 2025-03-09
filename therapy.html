@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTherapist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+          <div class="container">
+            <div class="logo-container">
+              <h1 class="logo-text">HealthGuard</h1>
+            </div>
+            <ul class="nav-links">
+              <!-- Home Dropdown -->
+              <li class="dropdown">
+                <a href="home.html">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Our Solution</a></li>
+                  <li><a href="#apps">Apps</a></li>
+                </ul>
+              </li>
+
+              <!-- HealthGuard Dropdown -->
+              <li class="dropdown">
+                <a href="index.html">HealthGuard</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#upload">Upload Data</a></li>
+                  <li><a href="#health-report">Health Report</a></li>
+                  <li><a href="#insights">Insights</a></li>
+                </ul>
+              </li>
+
+              <!-- iTherapist Dropdown -->
+              <li class="dropdown">
+                <a href="therapy.html">iTherapist</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#person">Personalization</a></li>
+                  <li><a href="#questions">Questions</a></li>
+                  <li><a href="#analysis">Analysis</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Your Very Own AI Therapist</h2>
+            <p>With the power of AI, you will be able to simulate situations that you may experience in your day-to-day life. With this, we can evaluate your mental health and provide you with beneficial insights</p>
+        </div>
+    </section>
+
+    <section id="person">
+        <div class="container">
+            <h2>Personalization</h2>
+            <p>Before we continue, your therapist needs to understand more about you!</p>
+
+            <div class="card">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name...">
+            </div>
+
+            <div class="card">
+                <label for="career">Career Goals and Challenges:</label>
+                <input type="text" id="career" placeholder="Describe your career goals and challenges...">
+            </div>
+
+            <div class="card">
+                <label for="relationships">Personal Relationship Status:</label>
+                <select id="relationships">
+                    <option value="family">Single</option>
+                    <option value="friends">Dating</option>
+                    <option value="romantic">Married</option>
+                    <option value="family">Divorced</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label for="finances">Financial Habits and Goals:</label>
+                <input type="text" id="finances" placeholder="Describe your financial habits and goals...">
+            </div>
+
+            <div class="card">
+                <label for="health">Health and Wellness:</label>
+                <input type="range" id="health" min="1" max="10" value="5">
+                <span id="health-value">5</span>
+            </div>
+
+            <div class="card">
+                <label for="hobbies">Hobbies and Passions:</label>
+                <input type="text" id="hobbies" placeholder="Describe your hobbies and passions...">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="health-report">
+        <div class="container">
+            <h2>Which topic do you need the most assistance with?</h2>
+            <div class="topic-buttons">
+                <button class="topic-btn" data-topic="career">Career</button>
+                <button class="topic-btn" data-topic="relationships">Relationships</button>
+                <button class="topic-btn" data-topic="finances">Finances</button>
+                <button class="topic-btn" data-topic="health">Health</button>
+                <button class="topic-btn" data-topic="hobbies">Hobbies</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="questions">
+        <div class="container card-container">
+            <div class="card">
+                <h3>iTherapist asks...</h3>
+                <p id="ai-response">Your iTherapist's queries will be here.</p>
+                <div class="response-actions">
+                    <button class="choice-btn" data-choice="option1" id="option1">Option 1</button>
+                    <button class="choice-btn" data-choice="option2" id="option2">Option 2</button>
+                    <button class="choice-btn" data-choice="option3" id="option3">Option 3</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="analysis">
+        <div class="container card-container">
+            <div class="card">
+                <h3>According to iTherapist's analysis:</h3>
+                <p id="ai-analysis">Your iTherapist's analysis will be here.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+          <p>&copy; 2023 HealthGuard. All rights reserved.</p>
+        </div>
+      </footer>
+
+    <script type="module" src="aiScript.mjs"></script>
+</body>
+</html>
